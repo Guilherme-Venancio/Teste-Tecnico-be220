@@ -1,20 +1,108 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-menu contentId="main-content">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title>Menu Content</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-content class="ion-padding">This is the menu content.</ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header class="headerHome">
+    <ion-toolbar mode="ios">
+      <ion-buttons slot="start">
+        <ion-menu-button color="dark"></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Logo</ion-title>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon class="iconNotifications" name="notifications"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <div class="divContentHeader">
+      <ion-item lines="none">
+        <ion-avatar class="avatarUser" slot="start">
+          <img alt="Silhouette of a person's head"
+            src="https://img2.gratispng.com/20171201/c50/woman-face-png-image-5a21d1324e05b5.4478381415121656823196.jpg" />
+        </ion-avatar>
+        <div style="display: flex; flex-direction: column; gap: 5px">
+          <ion-label>Leonardo Santos</ion-label>
+          <ion-label style="font-size: 0.7rem; color: blueviolet;">Nível Roxo</ion-label>
+        </div>
+      </ion-item>
+    </div>
+    <div class="divButtonHeader">
+      <ion-label style=" display: flex; align-items: center;">
+        <ion-icon class="icon-circle" name="body"></ion-icon>
+        MEU CORPO
+      </ion-label>
+      <ion-label style=" display: flex; align-items: center;">
+        <ion-icon class="icon-circle" name="trophy"></ion-icon>
+        OBJETIVOS E CONQUISTAS
+      </ion-label>
+    </div>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <h2 class="h2-title-slide">
+      PERSONAL ONLINE
+      <ion-icon style="font-size: 0.7rem;" class="icon-circle" name="add-outline"></ion-icon>
+    </h2>
+    <ion-slides [options]="slideOpts">
+      <ion-slide>
+        <div class="div-absolute-slide">
+          <ion-icon class="icon-circle-white" name="add-outline"></ion-icon>
+          <div style="display: flex; flex-direction: column;text-align: start;">
+            <ion-label>NOVO</ion-label>
+            <ion-label>TREINO</ion-label>
+          </div>
+        </div>
+        <ion-card class="card-slide">
+          <img [src]="img" alt="">
+        </ion-card>
+      </ion-slide><ion-slide>
+        <ion-card class="card-slide">
+          <img [src]="img" alt="">
+        </ion-card>
+      </ion-slide>
+      <ion-slide>Slide 3</ion-slide>
+    </ion-slides>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+    <h2 class="h2-title-slide">
+      PROGRAMAS
+      <ion-label class="label-circle">NOVO</ion-label>
+    </h2>
+    <ion-slides [options]="slideOpts">
+      <ion-slide>
+        <div class="div-absolute-text">
+          <div style="display: flex; flex-direction: column;text-align: start;">
+            <ion-label style="font-size: 0.7rem; color: rgb(248, 143, 6);">continuar treinando</ion-label>
+            <ion-label style="font-size: 0.9rem;">LEVANTAMENTO DE PESO</ion-label>
+          </div>
+        </div>
+        <ion-card class="card-slide card-slide-show">
+          <img [src]="img" alt="">
+        </ion-card>
+      </ion-slide><ion-slide>
+        <ion-card class="card-slide card-slide-show">
+          <img [src]="img" alt="">
+        </ion-card>
+      </ion-slide>
+      <ion-slide>Slide 3</ion-slide>
+    </ion-slides>
+
+    <h2 class="h2-title-slide">
+      CONTEÚDOS
+    </h2>
+    <ion-slides [options]="slideOpts">
+      <ion-slide>
+        <ion-card class="cardSlide" style="border-color: white;">
+        </ion-card>
+      </ion-slide><ion-slide>
+        <ion-card class="cardSlide">
+        </ion-card>
+      </ion-slide>
+      <ion-slide>Slide 3</ion-slide>
+    </ion-slides>
+
+  </ion-content>
+</div>
