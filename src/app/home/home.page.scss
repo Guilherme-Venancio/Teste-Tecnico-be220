@@ -1,11 +1,12 @@
 ion-toolbar,
-ion-item {
+ion-item,
+ion-card  {
   --background: #202020 !important;
   --border-width: 0 !important;
 }
 
-.headerHome {
-  height: 24%;
+.header-home {
+  min-height: 24%;
   border-radius: 10% 10% 11% 11% / 0% 1% 22% 22%;
   background: #202020 !important;
   justify-content: space-evenly;
@@ -15,7 +16,7 @@ ion-item {
   padding: 0 10px;
 }
 
-.iconNotifications {
+.icon-notifications {
   background-color: black;
   border-radius: 50%;
   padding: 7px;
@@ -36,20 +37,20 @@ ion-item {
 
 }
 
-.divContentHeader {
+.div-content-header {
   display: flex;
   justify-content: start;
   align-items: center;
   width: 90%;
 }
 
-.avatarUser {
+.avatar-user {
   margin-right: 10px !important;
   height: 20%;
   width: 20%;
 }
 
-.divButtonHeader {
+.div-button-header {
   background: rgba(0, 0, 0, 0.4);
   width: auto;
   font-size: 0.9rem;
@@ -84,10 +85,11 @@ ion-item {
 
 .card-slide {
   --background: transparent;
-  filter: grayscale(100%) brightness(0.1) sepia(0%) hue-rotate(360deg) saturate(0%) invert(5%) contrast(100%);
+  filter: grayscale(100%) brightness(0.2) sepia(0%) hue-rotate(360deg) saturate(0%) invert(5%) contrast(100%);
   position: relative;
   margin: 0 0 7px 16px !important;
   box-shadow: none !important;
+  cursor: pointer;
 }
 
 .card-slide img {
@@ -114,6 +116,7 @@ ion-item {
   color: white !important;
   font-size: 1.3rem;
   margin-left: 16px;
+  cursor: pointer;
 }
 
 .div-absolute-text {
@@ -125,7 +128,7 @@ ion-item {
   height: 60%;
   width: 80%;
   color: white !important;
-
+  cursor: pointer;
 }
 
 .icon-circle-white {
@@ -137,6 +140,7 @@ ion-item {
   box-sizing: border-box;
   font-size: 1.2rem;
   color: white;
+  cursor: pointer;
 }
 
 .label-circle {
@@ -152,7 +156,7 @@ ion-item {
 
 .card-conteudo {
   border: 1px solid white;
-  height: 8rem;
+  height: 8.3rem;
   width: 90%;
   display: flex;
   justify-content: start;

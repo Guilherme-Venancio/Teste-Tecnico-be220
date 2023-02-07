@@ -1,38 +1,38 @@
 <ion-menu contentId="main-content">
   <ion-header>
     <ion-toolbar>
-      <ion-title>Menu Content</ion-title>
+      <ion-title>Menu exemplo</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding">This is the menu content.</ion-content>
+  <ion-content class="ion-padding">Menu exemplo.</ion-content>
 </ion-menu>
 <div class="ion-page" id="main-content">
-  <ion-header class="headerHome">
+  <ion-header class="header-home">
     <ion-toolbar mode="ios">
       <ion-buttons slot="start">
-        <ion-menu-button color="dark"></ion-menu-button>
+        <ion-menu-button style="color: white;"></ion-menu-button>
       </ion-buttons>
       <ion-title>Logo</ion-title>
       <ion-buttons slot="end">
         <ion-button>
-          <ion-icon class="iconNotifications" name="notifications"></ion-icon>
-          <span class="notification">•</span>
+          <ion-icon class="icon-notifications" name="notifications"></ion-icon>
+          <span *ngIf="notification" class="notification">•</span>
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
-    <div class="divContentHeader">
+    <div class="div-content-header">
       <ion-item lines="none">
-        <ion-avatar class="avatarUser" slot="start">
-          <img
-            src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        <ion-avatar class="avatar-user" slot="start">
+          <img src="https://ionicframework.com/docs/img/demos/avatar.svg" />
         </ion-avatar>
-        <div style="display: flex; flex-direction: column; gap: 5px; font-family: Arial, Helvetica, sans-serif !important;">
-          <ion-label style="font-weight: bold;">Leonardo Santos</ion-label>
-          <ion-label style="font-size: 0.7rem; color: blueviolet;">Nível Roxo</ion-label>
+        <div
+          style="display: flex; flex-direction: column; gap: 5px; font-family: Arial, Helvetica, sans-serif !important;">
+          <ion-label style="font-weight: bold; font-family: Arial !important;">{{user.name}}</ion-label>
+          <ion-label [ngStyle]="{'color': user.colorLevel}" style="font-size: 0.7rem; font-family: Arial !important;">Nível {{user.level}}</ion-label>
         </div>
       </ion-item>
     </div>
-    <div class="divButtonHeader">
+    <div class="div-button-header">
       <ion-label style="display: flex; align-items: center;">
         <ion-icon class="icon-circle" name="body"></ion-icon>
         MEU CORPO
@@ -44,7 +44,8 @@
     </div>
   </ion-header>
   <ion-content class="ion-padding">
-    <h1 class="h1-title-slide">
+    <div class="content-div">
+    <h1 class="h1-title-slide" style="opacity: 0.2;">
       PERSONAL ONLINE
       <ion-icon style="font-size: 0.7rem;" class="icon-circle" name="add-outline"></ion-icon>
     </h1>
@@ -91,13 +92,15 @@
       <ion-slide>Slide 3</ion-slide>
     </ion-slides>
 
-    <h1 class="h1-title-slide" style="opacity: 0.1;">
+    <h1 class="h1-title-slide" style="opacity: 0.2;">
       CONTEÚDOS
     </h1>
-    <ion-slides style="opacity: 0.1;" [options]="slideOpts">
+    <ion-slides style="opacity: 0.2;" [options]="slideOpts">
       <ion-slide>
         <ion-card class="card-conteudo">
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAADICAMAAAA9W+hXAAAAA1BMVEX/fwCxRWwOAAAANElEQVR4nO3BMQEAAADCoPVP7WsIoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeAN1+AABVhDU2QAAAABJRU5ErkJggg==" alt="">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAADICAMAAAA9W+hXAAAAA1BMVEX/fwCxRWwOAAAANElEQVR4nO3BMQEAAADCoPVP7WsIoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeAN1+AABVhDU2QAAAABJRU5ErkJggg=="
+            alt="">
         </ion-card>
       </ion-slide>
       <ion-slide>
@@ -106,6 +109,7 @@
       </ion-slide>
       <ion-slide>Slide 3</ion-slide>
     </ion-slides>
+  </div>
 
   </ion-content>
 </div>
